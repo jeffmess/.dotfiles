@@ -4,6 +4,13 @@ local inoremap = Remap.inoremap
 
 -- Setup nvim-cmp.
 local cmp = require("cmp")
+local source_mapping = {
+	buffer = "[Buffer]",
+	nvim_lsp = "[LSP]",
+	nvim_lua = "[Lua]",
+	cmp_tabnine = "[TN]",
+	path = "[Path]",
+}
 local lspkind = require("lspkind")
 
 cmp.setup({
@@ -41,9 +48,23 @@ cmp.setup({
 	sources = {
 		{ name = "cmp_tabnine" },
 		{ name = "nvim_lsp" },
+		-- For vsnip user.
+		-- { name = 'vsnip' },
+
+		-- For luasnip user.
+		{ name = "luasnip" },
+		{ name = "buffer" },
 	},
 })
 
+local tabnine = require("cmp_tabnine.config")
+tabnine:setup({
+	max_lines = 1000,
+	max_num_results = 20,
+	sort = true,
+	run_on_every_keystroke = true,
+	snippet_placeholder = "..",
+})
 
 local nvim_lsp = require('lspconfig')
 
