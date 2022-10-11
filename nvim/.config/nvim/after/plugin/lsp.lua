@@ -100,3 +100,9 @@ end
 
 -- Solargraph
 require("lspconfig").solargraph.setup(config())
+
+-- Typescript
+require("lspconfig").tsserver.setup(config())
+
+-- niceties
+require("fidget").setup()
