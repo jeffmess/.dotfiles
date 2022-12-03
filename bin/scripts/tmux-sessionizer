@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Projects/cloud ~/Projects/sandbox ~/ ~/Projects/rust ~/Projects/ruby -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Projects/cloud ~/Projects/cloud/backup ~/Projects/sandbox ~/Projects/design  ~/ ~/Projects/rust ~/Projects/ruby -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
