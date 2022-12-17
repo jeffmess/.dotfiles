@@ -1,9 +1,7 @@
-local nnoremap = require("jeffmess.keymap").nnoremap
+local builtin = require("telescope.builtin")
 
-nnoremap("<leader>ps", function()
-    require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})
+vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ps', function()
+  builtin.grep_string({ search = vim.fn.input("Grep for > ") })
 end)
-
-nnoremap("<Leader>pf", function()
-    require('telescope.builtin').find_files()
-end)
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})

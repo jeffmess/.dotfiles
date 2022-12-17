@@ -7,7 +7,13 @@ return require('packer').startup(function(use)
   -- themes
   use 'folke/tokyonight.nvim'
   use 'gruvbox-community/gruvbox'
-
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+        vim.cmd('colorscheme rose-pine')
+    end
+  })
   -- telescopic things
   use("nvim-lua/plenary.nvim")
   use("nvim-lua/popup.nvim")
@@ -29,6 +35,9 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/nvim-treesitter", {
     run = ":TSUpdate"
   })
+
+  -- git
+  use("tpope/vim-fugitive")
 
   -- unnecessary niceties
   use("j-hui/fidget.nvim")
