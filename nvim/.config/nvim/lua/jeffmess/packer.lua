@@ -41,4 +41,7 @@ return require('packer').startup(function(use)
 
   -- unnecessary niceties
   use("j-hui/fidget.nvim")
+
+  -- display indent lines
+  use ("lukas-reineke/indent-blankline.nvim")
 end)
