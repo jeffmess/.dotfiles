@@ -38,10 +38,6 @@ lsp.set_preferences({
     }
 })
 
-vim.diagnostic.config({
-    virtual_text = true,
-})
-
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -64,3 +60,6 @@ end)
 
 lsp.setup()
 
+vim.diagnostic.config({
+    virtual_text = true,
+})

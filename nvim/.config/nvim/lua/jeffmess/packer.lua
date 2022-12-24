@@ -58,4 +58,10 @@ return require('packer').startup(function(use)
 
   -- unnecessary niceties
   use("j-hui/fidget.nvim")
+
+  -- Org mode
+  use({"nvim-orgmode/orgmode", config = function()
+      require('orgmode').setup{}
+    end
+  })
 end)
