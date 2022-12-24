@@ -64,4 +64,7 @@ return require('packer').startup(function(use)
       require('orgmode').setup{}
     end
   })
+
+  -- display indent lines
+  use ("lukas-reineke/indent-blankline.nvim")
 end)
