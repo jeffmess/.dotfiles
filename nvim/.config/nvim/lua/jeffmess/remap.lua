@@ -10,3 +10,6 @@ nnoremap("<C-u>", "<C-u>zz")
 
 nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
+
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
