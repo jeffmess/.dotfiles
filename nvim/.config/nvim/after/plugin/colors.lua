@@ -12,6 +12,6 @@ function BackgroundColors(color)
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-BackgroundColors('rose-pine')
+BackgroundColors('gruvbox')
 
 -- vim.cmd("colorscheme gruvbox")

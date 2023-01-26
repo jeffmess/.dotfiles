@@ -64,6 +64,9 @@ return require('packer').startup(function(use)
       require('orgmode').setup{}
     end
   })
+  use {'akinsho/org-bullets.nvim', config = function()
+    require('org-bullets').setup()
+  end}
 
   -- display indent lines
   use ("lukas-reineke/indent-blankline.nvim")
